@@ -1,6 +1,6 @@
 from django.db import models
 
-from abm_models.apps.utils.func_time import comienzo_materia, fin_materia
+from apps.utils.func_time import comienzo_materia, fin_materia
 
 
 class MateriaAlumnoManager(models.Manager):

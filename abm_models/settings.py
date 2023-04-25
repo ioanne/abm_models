@@ -41,7 +41,8 @@ DJANGO_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles"
+    "django.contrib.staticfiles",
+    "django_extensions"
 ]
 
 EXTERNAL_APPS = [
@@ -126,3 +127,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+ADMIN_URL = "admin/"
+ADMIN_SITE_HEADER = "ABM Models"

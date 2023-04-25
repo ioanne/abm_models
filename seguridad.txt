@@ -1,0 +1,27 @@
+Autenticación --> Validar la identidad de quien realiza una consulta.
+Autorización  --> Garantizar el acceso a nuestros datos y solo a nuestros datos.
+              --> Admin --> Tiene acceso a todo
+              --> Usuario --> Acceso a tus datos
+              --> usuario --> Acceso a los datos publicos
+
+
+Ocultamos
+backendifts.com/admin --> Django nos disponibiliza un administra
+                     --> Ocultar el administrador
+                     --> Cambiando la url, no va a ser mas /admin /algo-unico
+                     --> doble factor de auth
+
+
+backendifts.com/profile
+                    --> Acceder a nuestro perfil, no hace falta indicarle el ID del perfil.
+                    --> Obtiene el perfil de la sesion
+
+
+encriptamelo("/profile")
+backendifts.com/12hjkb31hj2g3123ghj123g123bnmk12g3hj12kfg3jh12
+POST
+body:
+"jk123hjjk12h3jk12h3jk123h12jkh123kj12"
+
+OWASP
+
