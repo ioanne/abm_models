@@ -7,5 +7,5 @@ class Alumno(Persona):
     monotributo = models.BooleanField()
 
     def __str__(self):
-        algo = super().__str__()
-        return f'Alumno: {algo}'
+        algo3 = super().__str__()
+        return f'Alumno: {algo3}'
