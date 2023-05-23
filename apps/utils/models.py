@@ -1,5 +1,7 @@
 from django.db import models
 
+from apps.custom_user.models import CustomUser
+
 
 class PersonaManager(models.Manager):
 
@@ -22,6 +24,8 @@ class Persona(models.Model):
     email = models.EmailField()
     deleted_at = models.DateTimeField(default=None, null=True, blank=True)
     active = models.BooleanField(default=True)
+    pepe = models.IntegerField(default=20)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True, blank=True)
 
     objects_all = models.Manager()
     objects = PersonaManager()

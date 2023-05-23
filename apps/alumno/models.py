@@ -4,7 +4,7 @@ from apps.utils.models import Persona
 
 
 class Alumno(Persona):
-    monotributo = models.BooleanField()
+    monotributo = models.BooleanField(default=False, null=True)
 
     def __str__(self):
         algo4 = super().__str__()

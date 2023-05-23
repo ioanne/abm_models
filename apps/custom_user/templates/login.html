@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <form method="POST" class="form-signin">
+        {% csrf_token %}
+        <div class="text-center mb-4">
+
+        <h1 class="h3 mb-3 font-weight-normal">Ingresar</h1>
+        <p>
+            Si usted ya se encuentra registrado, por favor, inicie sesión.
+        </p>
+        </div>
+
+        <div class="form-label-group">
+            <input type="text" id="{{ form.username.auto_id }}" name="{{ form.username.name }}" class="form-control" placeholder="Usuario" required autofocus>
+            <label for="{{ form.username.auto_id }}">Usuario</label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="{{ form.password.auto_id }}" name="{{ form.password.name }}" class="form-control" placeholder="Password" required>
+            <label for="{{ form.password.auto_id }}">Clave</label>
+        </div>
+
+        <div class="checkbox mb-3">
+        </div>
+        <div class="form-row text-center">
+            <div class="col-12">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
+            </div>
+        </div>
+
+        <p class="mt-5 mb-0 text-muted text-center">Si aún no te registrate, <a href="/usuario/registro">click aqui</a></p>
+        <p class="mb-0 text-muted text-center">¿No queres iniciar sesión? <a href="/">Volvé al inicio</a></p>
+
+</form>
+  {% endblock %}
