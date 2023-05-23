@@ -33,6 +33,7 @@ LOCAL_APPS = [
     "apps.alumno",
     "apps.profesor",
     "apps.examen",
+    "apps.custom_user",
 ]
 
 DJANGO_APPS = [
@@ -123,10 +124,22 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ADMIN_URL = "admin/"
+ADMIN_URL = "pepe/"
 ADMIN_SITE_HEADER = "ABM Models"
+
+# este cambio es necesario para que django levante el usuario desde el CustomUser nuestro.
+AUTH_USER_MODEL = 'custom_user.CustomUser'
+
+LOGIN_REDIRECT_URL = "alumno_inicio"
+LOGOUT_REDIRECT_URL = "alumno_inicio"
+
+LOGIN_URL = '/usuario/login'

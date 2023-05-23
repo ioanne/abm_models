@@ -4,8 +4,8 @@ from apps.utils.models import Persona
 
 
 class Alumno(Persona):
-    monotributo = models.BooleanField()
+    monotributo = models.BooleanField(default=False, null=True)
 
     def __str__(self):
-        algo3 = super().__str__()
-        return f'Alumno: {algo3}'
+        algo4 = super().__str__()
+        return f'Alumno: {algo4}'
